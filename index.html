@@ -237,6 +237,27 @@
     <!-- AWS SDK -->
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1349.0.min.js"></script>
 
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <video id="demoVideo" controls>
+                <source src="workingdemo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <style>
+        .video-modal {
+            display: none;
+        }
+
+        #demoVideo {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+
     <script>
 
         // config.js
@@ -574,6 +595,47 @@
                 if (!hamburger.contains(e.target) && !navLinks.contains(e.target)) {
                     hamburger.classList.remove("active");
                     navLinks.classList.remove("active");
+                }
+            });
+
+            const tryLiveButton = document.querySelector('.try-live-button');
+            const videoModal = document.getElementById('videoModal');
+            const video = document.getElementById('demoVideo');
+
+            tryLiveButton.addEventListener('click', async () => {
+                try {
+                    // Show video and play
+                    videoModal.style.display = 'block';
+                    await video.play();
+                    
+                    // Request fullscreen
+                    if (video.requestFullscreen) {
+                        await video.requestFullscreen();
+                    } else if (video.webkitRequestFullscreen) { // Safari
+                        await video.webkitRequestFullscreen();
+                    } else if (video.msRequestFullscreen) { // IE11
+                        await video.msRequestFullscreen();
+                    }
+                } catch (err) {
+                    console.error('Error:', err);
+                }
+            });
+
+            // Handle exit fullscreen
+            document.addEventListener('fullscreenchange', () => {
+                if (!document.fullscreenElement) {
+                    videoModal.style.display = 'none';
+                    video.pause();
+                    video.currentTime = 0;
+                }
+            });
+
+            // For Safari
+            document.addEventListener('webkitfullscreenchange', () => {
+                if (!document.webkitFullscreenElement) {
+                    videoModal.style.display = 'none';
+                    video.pause();
+                    video.currentTime = 0;
                 }
             });
         });
