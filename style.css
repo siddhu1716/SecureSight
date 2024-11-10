@@ -400,7 +400,7 @@ nav {
 /* Challenges Section - New Grid Style */
 .challenges-section {
     padding: 5rem 2rem;
-    background: var(--white);
+    background: var(--light-gray);
 }
 
 .challenges-section h2 {
@@ -467,7 +467,7 @@ nav {
 /* Technologies Section */
 .tech-section {
     padding: 5rem 2rem;
-    background: var(--light-gray);
+    background: var(--white);
 }
 
 .tech-section h2 {
