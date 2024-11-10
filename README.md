@@ -1,5 +1,5 @@
 # Secure Sight 
-
+## Demo Video is [here](https://youtu.be/QXfusN_adIE)
 ## Inspiration
 In times of emergency, every second counts, and unfortunately, not all victims can reach out safely or quickly enough to call for help. This inspired us to create Secure Sight, a proactive and accessible security solution that leverages machine learning to detect potential threats in real-time and alert security personnel. We wanted to build a tool that would empower individuals to anonymously report incidents with supporting evidence, bridging the gap between threat detection and law enforcement.
 
