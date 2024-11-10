@@ -1,0 +1,6 @@
+opencv-python-headless==4.8.0.74
+numpy==1.24.2
+twilio==8.4.0
+ultralytics==8.0.53
+boto3==1.26.99
+botocore==1.29.99
