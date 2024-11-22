@@ -9,10 +9,10 @@ from datetime import datetime
 
 # Load a model
 camera_label = "Alert: Security Concern Detected Near Main Entrance!"
-account_sid = 'AC8836dfeb51a6f5ea7f0b97cf4e7b2696'
-auth_token = '165bdbc3c59a70a10aaf966662b9ac58'
-twilio_phone_number = 'whatsapp:+14155238886'
-recipient_phone_numbers = ['whatsapp:+919502152068']
+account_sid = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+auth_token = 'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'
+twilio_phone_number = 'whatsapp:+199999999999'
+recipient_phone_numbers = ['whatsapp:+999999999999']
 
 client = Client(account_sid, auth_token)
 
